@@ -1,4 +1,7 @@
-﻿### 1.4.2 - September 25, 2016
+﻿### 1.4.2.1
+* Add NumberFormats
+
+### 1.4.2 - September 25, 2016
 * Rationalise the GoogleChart and PlotlyChart types
 * Rationalise the pipeline style helpers
 * Explicit dependencies versions

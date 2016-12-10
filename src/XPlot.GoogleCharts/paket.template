@@ -1,8 +1,12 @@
 type project
 owners
-    Taha Hachana
+    Kefei Lu
 authors
-    Taha Hachana, Tomas Petricek
+    Taha Hachana, Tomas Petricek, Kefei Lu
+id
+	Kfl.XPlot.GoogleCharts
+title
+	Kfl.XPlot.GoogleCharts
 projectUrl
     http://github.com/TahaHachana/XPlot
 iconUrl

@@ -405,6 +405,13 @@ type GoogleChart() =
             __.options.vAxis.title <- yTitle
         with _ ->
             __.options.vAxis <- Axis(title = yTitle)
+    
+    /// Sets a chart column's number format
+    member __.WithNumberFormat (col: int) (format: NumberFormat) =
+        __.options.datasetNumberFormats <-
+            match __.options.datasetNumberFormats with
+            | None -> Some [ col, format ]
+            | Some ls -> (col, format) :: ls |> Some
 
 type Chart =
 
@@ -467,7 +474,11 @@ type Chart =
     static member WithYTitle yTitle (chart:GoogleChart) =
         chart.WithYTitle yTitle
         chart
-
+    
+    /// Sets a chart column's number format
+    static member WithNumberFormat (col: int) (format: NumberFormat) (chart:GoogleChart) =
+        chart.WithNumberFormat col format
+        chart
 
 type Chart with
 
